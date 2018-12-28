@@ -16,14 +16,12 @@ File::~File()
 
 bool File::readNextBytes(char * bytes, size_t numOfBytes)
 {
-	if (f.read(bytes, numOfBytes)) return true;
-	return false;
+	return  f.read(bytes, numOfBytes) ? true : false;
 }
 
 bool File::writeNextBytes(char * bytes, size_t numOfBytes)
 {
-	if (f.write(bytes, numOfBytes)) return true;
-	return false;
+	return  f.write(bytes, numOfBytes) ? true : false;
 }
 
 bool File::readNextBit(char & bit)
